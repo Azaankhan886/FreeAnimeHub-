@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>URL Test</title></head>
+<body>
+<button onclick="
+  var fakeId = 'Ax' + Math.floor(Math.random() * 90 + 10);
+  window.location.hash = 'animestreaming/watch/' + fakeId;
+  alert('URL changed! Check URL bar: #animestreaming/watch/' + fakeId);
+">Test Hash URL</button>
+
+<button onclick="
+  var fakeId = 'Ax' + Math.floor(Math.random() * 90 + 10);
+  history.pushState({}, '', '?watch=' + fakeId);
+  alert('URL changed! Check URL bar: ?watch=' + fakeId);
+">Test PushState URL</button>
+</body>
+</html>
